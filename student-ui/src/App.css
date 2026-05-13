@@ -1,1 +1,161 @@
-/* Intentionally left minimal for a plain browser-default UI. */
+/* Import a clean, professional font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary-dark-green: #0d3b22;
+  --primary-dark-green-hover: #155d36;
+  --bg-light: #fbfbfb;
+  --surface-white: #ffffff;
+  --text-main: #222222;
+  --text-muted: #666666;
+  --border-light: #e6e6e6;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+/* Layout Container */
+div > h1:first-of-type {
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--primary-dark-green);
+}
+
+div > p:first-of-type {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  font-size: 0.9rem;
+}
+
+/* Forms */
+form {
+  background: var(--surface-white);
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+}
+
+form div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-dark-green);
+  box-shadow: 0 0 0 3px rgba(13, 59, 34, 0.1);
+}
+
+/* Buttons */
+button {
+  background-color: var(--primary-dark-green);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: inherit;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: var(--primary-dark-green-hover);
+}
+
+button:disabled {
+  background-color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+/* Specific styling for secondary/cancel buttons */
+button:nth-child(2), 
+td button:nth-child(2) {
+  background-color: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+}
+
+button:nth-child(2):hover, 
+td button:nth-child(2):hover {
+  background-color: var(--bg-light);
+  color: var(--text-main);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: var(--surface-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--border-light);
+}
+
+th, td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+}
+
+th {
+  background-color: var(--bg-light);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+td {
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: var(--primary-dark-green);
+}
